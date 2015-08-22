@@ -254,14 +254,14 @@
 					fontColor: 'black',
 					showScale: true,
 					generateTooltip: showStaticTooltip,
-				  useWeightedAverageForAggregation: true
+				    useWeightedAverageForAggregation: true
 				});
 
 				function showStaticTooltip(row, size, value) {
-				  return '<div style="background:#ffffbf; padding:10px; border-style:solid">' +
-					   '<span style="font-family:Courier"><b>' + data.getValue(row, 0) + '<br>' +
-					   'PRO: ' + Math.round(value * 10000) / 100 + '% <br>' + 
-					   'ECO: ' + Math.round((1 - value) * 10000) / 100 + '%';
+				  return '<div style="background:rgba(250,250,250,.85); padding:10px;">' +
+					   '<span style="font-family:Arial; font-size:12"><b>' + data.getValue(row, 0) + 
+                       '<br><br>' + 'PRO: </b>' + Math.round(value * 10000) / 100 + '% <br>' + 
+					   '<b>ECO: </b>' + Math.round((1 - value) * 10000) / 100 + '%';
 				}
 			}
 		</script>
