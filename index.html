@@ -1,1 +1,49 @@
-"Hello World" 
+<!DOCTYPE html>
+<style>
+	.text-center {
+	  text-align: center;
+	}
+	button {
+		color: #ffffff;
+		background-color: #1473e6;
+		font-size: 14px;
+		border: 0px solid #1473e6;
+		padding: 8px 16px;
+		cursor: pointer
+	}
+	button:hover {
+		color: #ffffff;
+		background-color: #125ab3;
+	}
+</style>
+
+<html>
+<head>
+<!-- HTML Codes by Quackit.com -->
+<title>
+Contact summary screenpop
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {background-color:#ffffff;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+h1{text-align:center;font-family:Arial, sans-serif;font-size:18px;color:#000000;background-color:#ffffff;}
+p {text-align:center;font-family:Georgia, serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#ffffff;}
+</style>
+</head>
+<body>
+<h1>Contact Summary</h1>
+<p><span id="summary">This is the summary of the contact you just handled. This is meant to be automatically brought up upon contact completion. The idea is to save Agent's time by reducing after call work providing a text that they can just copy and paste, avoiding writting the summary of the contact on their own</span></p>
+<p>You will be able to copy it with a click on the button below, and to paste it in your CRM by pressing CTRL+V (Windows) or CMND+V (MacOS).</p>
+
+<div class="text-center">
+<button onclick="copyToClipboard('summary')" align=center>Copy Summary</button>
+</div>
+
+<script>
+function copyToClipboard(itemToCopy) {
+  var copyText = document.getElementById(itemToCopy);
+  navigator.clipboard.writeText(copyText.innerHTML);
+}
+</script>
+</body>
+</html>
